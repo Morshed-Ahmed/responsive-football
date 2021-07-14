@@ -2,11 +2,17 @@
 *{
     margin: 0;
     padding: 0;
+    
+    
 }
 
 body{
     font-family: 'Poppins', sans-serif;
     background: #FFFFFF;}
+
+    .container{
+        width: 100%;
+    }
 
  
 /* header styles */
@@ -16,6 +22,7 @@ header{
 }
 
 .header-container{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,16 +35,25 @@ header{
 }
    
 .home-ditel h1{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
     color: #FFFFFF;
 }
 
 .home-ditel button{
+    width: 150px;
+    height: 70px;
     color: #FFFFFF;
     background-color: #E02C6D;
     font-size: 16px;
-    padding: 10px 24px;
+    
+    transition: width 2s;
+}
+
+.home-ditel button:hover{
+    width: 350px;
+    color: black;
+    
 }
 
 .fas{
@@ -79,6 +95,7 @@ header{
 }
 
 .player-container{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -163,3 +180,43 @@ height: 110px;
     margin-top: 60px;
     margin-bottom: 60px;
 }
+
+
+
+/*----------- 
+media queries
+--------------- */
+
+/* mobail devaices */
+
+@media only screen and (max-width: 688px) {
+    
+
+.header-container{
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-container{
+    flex-direction: column;
+    align-items: center;
+}
+  
+.form-container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.cups-container{
+    flex-direction: column;
+    align-items: center;
+}
+    
+  }
